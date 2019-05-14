@@ -27,19 +27,19 @@ public class Placa implements Serializable {
     private Long id;
     
     @OneToMany(mappedBy = "placa", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private final List<PlacaComponente> placaComponentes;
+    private List<Componente> placaComponentes;
    
     @Column(name = "NUMERO")
     private String numero;
 
     @Column(name = "DESCRICAO") 
-    private double descricao;
+    private String descricao;
     
-    public void addItem(PlacaComponente item) {
+    public void addItem(Componente item) {
         this.placaComponentes.add(item);
     }
     
-    public void removeItem(PlacaComponente item){
+    public void removeItem(Componente item){
         this.placaComponentes.remove(item);
     }
 
@@ -59,12 +59,16 @@ public class Placa implements Serializable {
         this.numero = numero;
     }
 
-    public double getDescricao() {
+    public String getDescricao() {
         return descricao;
     }
 
-    public void setDescricao(double descricao) {
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+    
+    public void setComponentes(List<Componente> lista){
+        this.placaComponentes = lista;
     }
     
     

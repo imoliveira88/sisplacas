@@ -8,7 +8,7 @@ import javax.persistence.Persistence;
 
 @SuppressWarnings("unchecked")
 public class DAOGenericoJPA<PK, T> {
-    private static final String PERSISTENCE_UNIT_NAME = "sischamados";
+    private static final String PERSISTENCE_UNIT_NAME = "sisPlacasPU";
     private static EntityManagerFactory factory; 
     private final EntityManager em;
  

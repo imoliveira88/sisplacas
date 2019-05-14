@@ -17,6 +17,8 @@ public class SisPlacasF extends javax.swing.JFrame {
     public SisPlacasF() {
         super("Sistema de Controle de Placas Exocet");
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
     }
 
     /**
@@ -36,6 +38,8 @@ public class SisPlacasF extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jMenuBar1.setBackground(new java.awt.Color(237, 243, 217));
 
         jMenu1.setText("Cadastros");
 
